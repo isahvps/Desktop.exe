@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#008080">
+  <title>Desktop.exe — Sistema legado</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/game.js" defer></script>
+</head>
+<body>
+  <main id="desktop" class="desktop" aria-label="Área de trabalho fictícia">
+    <div class="desktop-icons" aria-label="Aplicativos">
+      <button class="desktop-icon" data-open="readme"><span class="emoji">📄</span><span>LEIA-ME.txt</span></button>
+      <button class="desktop-icon" data-open="files"><span class="emoji">📁</span><span>Meus arquivos</span></button>
+      <button class="desktop-icon" data-open="notepad"><span class="emoji">📝</span><span>Bloco de notas</span></button>
+      <button class="desktop-icon" data-open="terminal"><span class="emoji">⌨️</span><span>Terminal</span></button>
+      <button class="desktop-icon" data-open="player"><span class="emoji">📼</span><span>Media Player</span></button>
+      <button class="desktop-icon" data-open="paint"><span class="emoji">🎨</span><span>Paint.exe</span></button>
+      <button class="desktop-icon" data-open="recycle"><span class="emoji">🗑️</span><span>Lixeira</span></button>
+    </div>
+
+    <section id="window-layer" aria-live="polite"></section>
+
+    <div id="start-menu" class="start-menu hidden">
+      <div class="start-banner">DESKTOP<span>.EXE</span><small>Sistema legado 98</small></div>
+      <div class="start-items">
+        <button data-open="readme">📄 &nbsp; Leia-me</button>
+        <button data-open="files">📁 &nbsp; Meus arquivos</button>
+        <button data-open="notepad">📝 &nbsp; Bloco de notas</button>
+        <button data-open="terminal">⌨️ &nbsp; Terminal</button>
+        <button data-open="player">📼 &nbsp; Media Player</button>
+        <hr>
+        <button id="restart-game">↻ &nbsp; Reiniciar investigação</button>
+        <button id="shutdown">⏻ &nbsp; Desligar (simulado)</button>
+      </div>
+    </div>
+
+    <div id="toast" class="toast hidden" role="status"></div>
+    <div id="glitch-overlay" class="glitch-overlay" aria-hidden="true"></div>
+    <div id="jump-overlay" class="jump-overlay hidden" aria-hidden="true">
+      <div class="jump-face">◉</div>
+      <p>VOCÊ NÃO DEVIA TER ABERTO ISSO.</p>
+    </div>
+
+    <footer class="taskbar">
+      <button id="start-button" class="start-button">🪟 Iniciar</button>
+      <div id="task-buttons" class="task-buttons"></div>
+      <div class="taskbar-tray"><span id="sound-indicator">♪</span><span id="clock">00:00</span></div>
+    </footer>
+  </main>
+  <div id="boot-screen" class="boot-screen">
+    <div class="boot-logo">DESKTOP<span>.EXE</span></div>
+    <p>Sistema legado 98.4</p>
+    <div class="boot-progress"><span></span></div>
+    <p class="boot-hint">Clique em qualquer lugar para iniciar</p>
+  </div>
+  <noscript>Este jogo precisa de JavaScript ativado para funcionar.</noscript>
+</body>
+</html>
